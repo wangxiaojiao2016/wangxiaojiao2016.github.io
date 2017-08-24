@@ -61,6 +61,147 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-模块化" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/24/模块化/" class="article-date">
+  <time datetime="2017-08-24T07:22:39.000Z" itemprop="datePublished">2017-08-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/24/模块化/">模块化</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><font color="deeppink">类别</font><ul>
+<li>cmd(seajs)就近依赖</li>
+<li>amd(requirejs)依赖前置</li>
+<li>commonjs(node) </li>
+</ul>
+</li>
+<li><font color="deeppink">优点</font><ul>
+<li>利于工作协作</li>
+<li>高内聚低耦合</li>
+<li>实现代码重复调用</li>
+<li>闭包，命名空间（不能完全避免命名冲突 调用过长）</li>
+</ul>
+</li>
+<li><font color="deeppink">模块的应用</font><ul>
+<li>定义模块（创建js文件）</li>
+<li>使用模块（require）</li>
+<li>导出模块(module.export/exports)</li>
+</ul>
+</li>
+<li><p><font color="deeppink">文件模块</font></p>
+<ul>
+<li><p>通过相对路径引用</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"> computed.js:</div><div class="line"> var calc=&#123;</div><div class="line">    &apos;+&apos;:function (a,b) &#123;</div><div class="line">        return a+b</div><div class="line">    &#125;,</div><div class="line">    &apos;-&apos;:function (a,b) &#123;</div><div class="line">        return a-b</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">//方式一</div><div class="line">module.exports=calc;</div><div class="line">//方式二</div><div class="line">exports .calc=calc</div><div class="line">var Cale=require(&apos;./computed&apos;).calc;</div><div class="line">useComputed.js:</div><div class="line">//方式一 module.exports</div><div class="line">var Cale=require(&apos;./computed&apos;);</div><div class="line">console.log(Cale[&apos;+&apos;](1,20));</div><div class="line"> //方式2 module.exports</div><div class="line">var Cale=require(&apos;./computed&apos;).calc;</div><div class="line"> console.log(Cale[&apos;+&apos;](1,20));</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><font color="deeppink">第三方模块npm</font></p>
+<ul>
+<li>可以直接用包名引用</li>
+<li>必须放在node_modules上，并且名字不可更改</li>
+<li>npm后台文件管理器   bower前端文件管理器</li>
+<li>别人的模块 npm</li>
+<li><p>通过npm下载</p>
+<ul>
+<li><p><font color="pink">1.全局下载（在命令行使用)</font></p>
+<ul>
+<li><p>（1）nrm工具（切换源）</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install nrm -g</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>添加源</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nrm add zf1(名字) http://172.18.1.139(路径)</div></pre></td></tr></table></figure>
+</li>
+<li><p>删除源</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nrm del zf1</div></pre></td></tr></table></figure>
+</li>
+<li><p>切换源</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nrm use zf1(要使用的名字)</div></pre></td></tr></table></figure>
+</li>
+<li><p>测试源</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nrm test</div></pre></td></tr></table></figure>
+</li>
+<li><p>显示源</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nrm ls</div></pre></td></tr></table></figure>
+</li>
+<li><p>nodeppt</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">npm install nodeppt -g 安装</div><div class="line">nodeppt 执行</div><div class="line">文件夹打开命令行</div><div class="line">nodeppt start -p 999 改端口号</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><font color="pink">2.本地下载 （在代码中使用）</font></p>
+<ul>
+<li><p>记录安装过得所有模块</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//文件夹不要中文大写特殊符及重复名</div><div class="line">//不能写注释</div><div class="line">npm init(记录所有依赖关系)</div></pre></td></tr></table></figure>
+<ul>
+<li><p>（1）依赖（开发上线都依赖）</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install jquery --save(-S)</div></pre></td></tr></table></figure>
+</code></pre></li>
+<li><p>（2）开发依赖（只在开发时用）</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install babel --dave -dev</div></pre></td></tr></table></figure>
+</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><font color="deeppink">模块卸载</font>
+
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">npm uninstall nodeppt -g</div><div class="line">npm uninstall jquery --save【npm info jquery查看版本  】不指定版本默认为最新的</div><div class="line">   npm uninstall gulp  --save-dev</div></pre></td></tr></table></figure>
+</li>
+<li><font color="deeppink">代码发布（上线）</font><br>  -  找到带有package.json文件夹<br>  - <font color="pink">1.切到官方npm上</font>
+
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nrm use npm</div></pre></td></tr></table></figure>
+</code></pre><ul>
+<li><font color="pink">2.npm addUser注册账号  http//registry.npm.js.org</font>
+
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm addUser</div><div class="line"> - 输入密码</div></pre></td></tr></table></figure>
+</li>
+<li><font color="pink">3.发布</font>
+
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"> npm publish</div><div class="line">//查询： 打开npm，输入名字查询</div></pre></td></tr></table></figure>
+</li>
+<li><p>密码修改</p>
+</li>
+<li><font color="pink">版本升级 （更改version的数值 然后npm publish）</font>
+
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">具体步骤</div><div class="line">1.上传：新建文件-》package.json下-》进入目录-》npm init -y--》生成json文件--》npm install+（package.json中的项目名字）@版本 --save--》</div><div class="line">2.模块查找（使用）：模块目录引用 （第三方 start.js中写 require+包名（项目名））--》先查找（module.path），找到文件名相同的文件夹，再找package.json，看里边的main，运行main对应的文件，当前没有，向上级查找，（根目录）找不到就报错(有时会默认是index.js)</div></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/模块化/" data-id="cj6q4w99n0006n46r7e5jwzsr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Node-Global" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/08/24/Node-Global/" class="article-date">
@@ -133,7 +274,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Node-Global/" data-id="cj6q3ty2b0001pc6r5w7i5eps" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Node-Global/" data-id="cj6q4w98i0001n46rc6z42czh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -178,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Redux/" data-id="cj6q3ty330005pc6rgkc3wpwd" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Redux/" data-id="cj6q4w98n0002n46rvr4otxok" class="article-share-link">Share</a>
       
       
     </footer>
@@ -204,7 +345,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Angular/" data-id="cj6q3ty210000pc6rdtxn92ld" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Angular/" data-id="cj6q4w9870000n46r74hhsiaa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -272,7 +413,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Vue/" data-id="cj6q3ty2j0003pc6r9i40ejs7" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Vue/" data-id="cj6q4w98r0003n46rk6vcyf51" class="article-share-link">Share</a>
       
       
     </footer>
@@ -317,7 +458,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/hello-world/" data-id="cj6q3ty2g0002pc6rec0soqp0" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/hello-world/" data-id="cj6q4w98u0004n46rpns87aea" class="article-share-link">Share</a>
       
       
     </footer>
@@ -476,7 +617,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/07/01/jQuery/" data-id="cj6q3ty300004pc6r4zs7ziwa" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/07/01/jQuery/" data-id="cj6q4w98x0005n46r86nosqln" class="article-share-link">Share</a>
       
       
     </footer>
@@ -516,6 +657,10 @@
       <ul>
         
           <li>
+            <a href="/2017/08/24/模块化/">模块化</a>
+          </li>
+        
+          <li>
             <a href="/2017/08/24/Node-Global/">Node~Global</a>
           </li>
         
@@ -529,10 +674,6 @@
         
           <li>
             <a href="/2017/08/24/Vue/">Vue</a>
-          </li>
-        
-          <li>
-            <a href="/2017/08/24/hello-world/">Hello World</a>
           </li>
         
       </ul>
