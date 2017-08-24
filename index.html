@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wangxiaojiao2016.github.io"></form>
@@ -60,6 +60,88 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Node-Global" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/24/Node-Global/" class="article-date">
+  <time datetime="2017-08-24T07:03:12.000Z" itemprop="datePublished">2017-08-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/24/Node-Global/">Node~Global</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p><font color="darkorchid">Global</font></p>
+<ul>
+<li>服务器端没有window对象，后台最大的是global</li>
+<li>global属性：<ul>
+<li>在文件中运行 this不是global</li>
+<li>process  进程对象<ul>
+<li>nextTick 下一队列（当前队列的底部）</li>
+<li>process.pid 当前进程id</li>
+<li>process.kill（） 杀死进程</li>
+<li>process.cwd（） 当前工作目录（可更改）</li>
+<li>process.exit（） 退出进程</li>
+</ul>
+</li>
+<li>Buffer 缓存 16进制</li>
+<li>clearImmediate :[function] 清除立即</li>
+<li>setImmediate :[function]  设置立即</li>
+<li>setTimeOut/clearTimeout</li>
+<li>setInterval/clearInterval</li>
+<li>console:[Getter] 输出</li>
+<li>global上的属性可以在任意地方访问</li>
+</ul>
+</li>
+<li>global变量的声明<ul>
+<li>通过var声明不能直接声明在global上</li>
+<li>声明在global上–》global.xxx</li>
+<li>const 常量</li>
+<li>需要变的值–》let</li>
+</ul>
+</li>
+<li><p>console</p>
+<ul>
+<li>console.log()</li>
+<li>console.dir()</li>
+<li>console.info()</li>
+<li>console.error()</li>
+<li>console.time(‘start’)  传入的参数（字符串）保持一致</li>
+<li><p>console.timeEnd(‘start’) 传入的参数（字符串）保持一致</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">      console.time(&apos;start&apos;) </div><div class="line">      for(var i=0;i&lt;1000;i++)&#123;&#125;</div><div class="line">      console.timeEnd(&apos;start&apos;) </div><div class="line">     ``` </div><div class="line">- setTimeOut</div><div class="line">     - 异步（process.nextTick  ;setTimeOut  ;setImmediate）</div></pre></td></tr></table></figure>
+<p> //第二个参数之后都是给setTimeOut传值<br> function eat(who,foods){<br> console.log（this）//setTimeout,指自己<br>console.log(who+’吃’+foods) //里边的this指自己<br>}<br>setTimeout(eat,1000,’小猪’,’冰激凌’)<br>//setTimeout(eat.bind(global),1000,’小猪’,’冰激凌’)改变this指向</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">- &lt;font color=&apos;red&apos;&gt;五个全局属性&lt;/font&gt;</div><div class="line">   -  绝对路径不可变</div><div class="line">   -  console.log(__dirname) //文件名，不会更改（运行文件的过程中，会给文件套一层闭包函数，函数中要有形参</div><div class="line">   - console.log(__filename);//文件模块，</div><div class="line">    ``` </div><div class="line">      (function(exports,require,module,__dirname,__filename)&#123;</div><div class="line">                      2.global.js    //闭包导致this变化</div><div class="line">       &#125;</div></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Node-Global/" data-id="cj6q3ty2b0001pc6r5w7i5eps" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Redux" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -96,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Redux/" data-id="cj6pxkvrw0002g06rve0yz0ea" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Redux/" data-id="cj6q3ty330005pc6rgkc3wpwd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -122,7 +204,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Angular/" data-id="cj6pxkvrq0000g06r6nvnesfx" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Angular/" data-id="cj6q3ty210000pc6rdtxn92ld" class="article-share-link">Share</a>
       
       
     </footer>
@@ -190,7 +272,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Vue/" data-id="cj6pxkvru0001g06rtze30nh9" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Vue/" data-id="cj6q3ty2j0003pc6r9i40ejs7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -235,7 +317,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/hello-world/" data-id="cj6pxkvry0003g06rk590pn0x" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/hello-world/" data-id="cj6q3ty2g0002pc6rec0soqp0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -394,7 +476,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/07/01/jQuery/" data-id="cj6pxkvs80004g06rhh3cnrjn" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/07/01/jQuery/" data-id="cj6q3ty300004pc6r4zs7ziwa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -419,7 +501,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
     </div>
@@ -429,9 +511,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/08/24/Node-Global/">Node~Global</a>
+          </li>
         
           <li>
             <a href="/2017/08/24/Redux/">Redux</a>
@@ -447,10 +533,6 @@
         
           <li>
             <a href="/2017/08/24/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/01/jQuery/">jQuery</a>
           </li>
         
       </ul>
