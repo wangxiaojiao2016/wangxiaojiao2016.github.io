@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>D3.js | Wang.blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="适用情况  1.选择 D3：如果希望开发脑海中任意想象到的图表。 2.选择 Highcharts、Echarts 等：如果希望开发几种固定种类的、十分大众化的图表。   一.引入方式  (1)下载安装包D3.zip (2)引用网址（有网的情况下使用）   1&amp;lt;script src=&amp;quot;http://d3js.org/d3.v3.min.js&amp;quot; charset=&amp;quot;">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="D3.js">
+<meta property="og:url" content="https://wangxiaojiao2016.github.io/2017/08/24/D3-js/index.html">
+<meta property="og:site_name" content="Wang.blog">
+<meta property="og:description" content="适用情况  1.选择 D3：如果希望开发脑海中任意想象到的图表。 2.选择 Highcharts、Echarts 等：如果希望开发几种固定种类的、十分大众化的图表。   一.引入方式  (1)下载安装包D3.zip (2)引用网址（有网的情况下使用）   1&amp;lt;script src=&amp;quot;http://d3js.org/d3.v3.min.js&amp;quot; charset=&amp;quot;">
+<meta property="og:image" content="https://wangxiaojiao2016.github.io/2017/08/24/D3-js/2.png">
+<meta property="og:image" content="https://wangxiaojiao2016.github.io/2017/08/24/D3-js/0T3KNNX5[10LOG6JJFJPXP.png">
+<meta property="og:updated_time" content="2017-08-24T08:55:35.560Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="D3.js">
+<meta name="twitter:description" content="适用情况  1.选择 D3：如果希望开发脑海中任意想象到的图表。 2.选择 Highcharts、Echarts 等：如果希望开发几种固定种类的、十分大众化的图表。   一.引入方式  (1)下载安装包D3.zip (2)引用网址（有网的情况下使用）   1&amp;lt;script src=&amp;quot;http://d3js.org/d3.v3.min.js&amp;quot; charset=&amp;quot;">
+<meta name="twitter:image" content="https://wangxiaojiao2016.github.io/2017/08/24/D3-js/2.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Wang.blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Wang.blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wangxiaojiao2016.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-D3-js" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/24/D3-js/" class="article-date">
+  <time datetime="2017-08-24T08:20:03.000Z" itemprop="datePublished">2017-08-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      D3.js
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>适用情况</p>
+<ul>
+<li>1.选择 D3：如果希望开发脑海中任意想象到的图表。</li>
+<li>2.选择 Highcharts、Echarts 等：如果希望开发几种固定种类的、十分大众化的图表。</li>
+</ul>
+</li>
+<li><p><font color="deeppink">一.引入方式</font></p>
+<ul>
+<li>(1)下载安装包D3.zip</li>
+<li><p>(2)引用网址（有网的情况下使用）</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;script src=&quot;http://d3js.org/d3.v3.min.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><font color="deeppink">二.操作方式</font></p>
+<pre><code>- 链式操作（与jQuery类似）
+</code></pre></li>
+<li><font color="deeppink">三.概念</font><ul>
+<li>选择集<ul>
+<li>使用 d3.select() 或 d3.selectAll() 选择元素后返回的对象，就是选择集</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><font color="deeppink">四.D3的操作</font>
+
+<ul>
+<li><font color="purple">1.文字输出</font>
+
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">    &lt;body&gt;</div><div class="line">&lt;p&gt;Hello World 1&lt;/p&gt;</div><div class="line">&lt;p&gt;Hello World 2&lt;/p&gt;</div><div class="line">&lt;script src=&quot;http://d3js.org/d3.v3.min.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;script&gt;</div><div class="line"> d3.select(&apos;body&apos;).selectAll(&apos;p&apos;).text(&apos;www.decembercafe.org&apos;);</div><div class="line">    //选择&lt;body&gt;中所有的&lt;p&gt;，其文本内容为 practise，选择集保存在变量 p 中</div><div class="line">    var p=d3.select(&apos;body&apos;)</div><div class="line">            .selectAll(&apos;p&apos;)</div><div class="line">            .text(&apos;practise&apos;);</div><div class="line">    //修改段落颜色和字体大小</div><div class="line">    p.style(&quot;color&quot;,&quot;red&quot;)</div><div class="line">            .style(&quot;font-size&quot;,&quot;72px&quot;)</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><p><font color="purple">2.元素操作</font></p>
+<ul>
+<li><p><font color="plum">（1）选择元素</font></p>
+<ul>
+<li>d3.select（）；选择所有指定元素的第一个</li>
+<li><p>d3.selectAll（）；选择指定元素的全部</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var body = d3.select(&quot;body&quot;); //选择文档中的body元素</div><div class="line">var p1 = body.select(&quot;p&quot;);      //选择body中的第一个p元素</div><div class="line">var p = body.selectAll(&quot;p&quot;);    //选择body中的所有p元素</div><div class="line">var svg = body.select(&quot;svg&quot;);   //选择body中的svg元素</div><div class="line">var rects = svg.selectAll(&quot;rect&quot;);  //选择svg中所有的svg元素</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><font color="plum">（2）绑定元素</font></p>
+<ul>
+<li><p>datum（）； 绑定到一个数据选择集上</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">                            var str=&apos;China&apos;;</div><div class="line">                            var body=d3.select(&quot;body&quot;);</div><div class="line">                            var p=body.selectAll(&apos;p&apos;);</div><div class="line">                            p.datum(str);</div><div class="line">                            //无名函数  选择集需要使用绑定数据时经常使用</div><div class="line">                            /*无名函数 function（d,i）包含两个参数  -参数一：代表数据，也就是与某元素绑定的数据</div><div class="line">                                                                     参数二：代表索引，代表数据的索引号，从0开始</div><div class="line">                            *                  */</div><div class="line">                            p.text(function (d, i) &#123;</div><div class="line">                                return &quot;第&quot; +i+</div><div class="line">                                        &quot;个绑定的数据是&quot;+d</div><div class="line">                            &#125;)</div><div class="line">                            /*输出结果：</div><div class="line">                             第0个绑定的数据是China</div><div class="line">                        </div><div class="line">                             第1个绑定的数据是China</div><div class="line">                        </div><div class="line">                             第2个绑定的数据是China*/</div><div class="line"> &lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>data（）;  绑定到选择集上，数组的个响指分别于选择集的各元素绑定–》常用</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">                       var dataset=[&quot;I like apple&quot;,&quot;I like banana&quot;,&quot;I like orange&quot;]</div><div class="line">                       var body=d3.select(&apos;body&apos;);</div><div class="line">                       var p=body.selectAll(&apos;p&apos;);</div><div class="line">                       p.data(dataset)</div><div class="line">                               .text(function(d,i)&#123;</div><div class="line">                                   return d;</div><div class="line">                               &#125;);</div><div class="line">                       // 这里也使用了无名函数 当i=0 时，d 为I like apple</div><div class="line">                       /*输出结果：</div><div class="line">                        I like apple</div><div class="line">                        I like banana</div><div class="line">                        I like orange</div><div class="line">                       * */</div><div class="line"> &lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><font color="plum">（3）选择、插入、删除元素</font></p>
+<ul>
+<li><p>选择元素 ID、类</p>
+<ul>
+<li><p>选择指定元素用ID</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"> //选择第二个元素 </div><div class="line">&lt;script&gt;</div><div class="line">    var p2=d3.selectAll(&apos;body&apos;).select(&apos;#myid&apos;);</div><div class="line">    p2.style(&quot;color&quot;,&quot;green&quot;)</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;!--类 --&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li>选择多个元素  用类  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">       var p = d3.selectAll(&apos;body&apos;).selectAll(&quot;.myclass&quot;);</div><div class="line">        p.style(&quot;color&quot;,&quot;yellow&quot;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>插入元素</p>
+<ul>
+<li>append（）在选择集末尾插入元素</li>
+<li>insert（）   在选择集前面插入元素</li>
+</ul>
+</li>
+<li>删除元素       <ul>
+<li>remove（）删除元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var p = body.select(&quot;#myid&quot;);</div><div class="line">p.remove();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><font color="deeppink">五.D3的使用</font></p>
+<ul>
+<li><p><font color="purple">1.比例尺（Scale）</font></p>
+<ul>
+<li>（1）定义：将某一区域的值映射到另一区域，其大小关系不变</li>
+<li>（2）作用：解决数值过大或者过小无法绘制的局限性</li>
+<li>（3）参数<ul>
+<li>定义域：domain</li>
+<li>值域：range</li>
+</ul>
+</li>
+<li><p>（4）分类</p>
+<ul>
+<li><p>a.线性比例尺</p>
+<ul>
+<li>定义：能将一个连续的区间，映射到另一区间。–》可以用来解决柱形图宽度的问题</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"> 假设有一下数组：</div><div class="line"> var dataset=[1.2,2.3,0.9,1.5,3.3],现有如下要求，将dataset中的最小值映射成0，最大值，映射成300；</div><div class="line"> 代码如下</div><div class="line"> var  min=d3.min(dataset);</div><div class="line"> var max=d3.max(dataset);</div><div class="line"> var linear=d3.scale.linear()</div><div class="line">                  .domain([min,max])</div><div class="line">                  .range(0,[300])</div><div class="line">                  linear(0.9)</div><div class="line">        linear(0.9);    //返回 0</div><div class="line">        linear(2.3);    //返回 175</div><div class="line">        linear(3.3);    //返回 300</div><div class="line">//d3.scale.linear()返回值可以当做函数来使用，所以才有linear（0.9）的用法</div></pre></td></tr></table></figure>
+</li>
+<li><p>b.序数比例尺</p>
+<ul>
+<li>针对离散型数据来使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var index = [0, 1, 2, 3, 4];</div><div class="line"> var color = [&quot;red&quot;, &quot;blue&quot;, &quot;green&quot;, &quot;yellow&quot;, &quot;black&quot;];</div><div class="line"> var ordinal=d3.scale.ordinal()</div><div class="line">         .domain(index)</div><div class="line">         .range(color);</div><div class="line"> ordinal(0);</div><div class="line"> ordinal(1);</div><div class="line"> ordinal(4)</div><div class="line"> console.log([ordinal(0),ordinal(1),ordinal(4)]);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><font color="purple">2.坐标轴（axis）</font><ul>
+<li>d3.svg.axis():D3中的坐标轴组件，能够在SVG中生成坐标轴的元素</li>
+<li>scale（）：指定比例尺</li>
+<li>orient（bottom）：指定刻度的朝向，bottom表示在坐标轴下方显示</li>
+<li>ticks（）：指定刻度的数量</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><font color="deeppink">六.动态操作</font>  
+
+<ul>
+<li><font color="purple">transition</font>
+
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.attr(&quot;fill&quot;,&quot;red&quot;)         //初始颜色为红色</div><div class="line">.transition()               //启动过渡</div><div class="line">.attr(&quot;fill&quot;,&quot;steelblue&quot;)   //终止颜色为铁蓝色</div></pre></td></tr></table></figure>
+</li>
+<li><font color="purple">duration</font>
+
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">     指定过渡的持续时间，单位为毫秒。</div><div class="line">如 duration(2000) ，指持续 2000 毫秒，即  2 秒。</div></pre></td></tr></table></figure>
+</li>
+<li><p><font color="purple">ease()指定过渡方式</font></p>
+<ul>
+<li>linear：普通的线性变化</li>
+<li>circle：慢慢达到变换的最终状态</li>
+<li>elastic：带有弹跳的达到最终状态</li>
+<li><p>bounce：在最终状态处弹跳几次调用时，格式形如： ease(“bounce”)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"> 例如，对整体指定时：</div><div class="line">.transition()</div><div class="line">.duration(1000)</div><div class="line">.delay(500)</div><div class="line">如此，图形整体在延迟 500 毫秒后发生变化，变化的时长为 1000 毫秒。因此，过渡的总时长为1500毫秒。</div><div class="line">又如，对一个一个的图形（图形上绑定了数据）进行指定时：</div><div class="line">.transition()</div><div class="line">.duration(1000)</div><div class="line">.delay(funtion(d,i)&#123;</div><div class="line">    return 200*i;</div><div class="line">&#125;)</div><div class="line">如此，假设有 10 个元素，那么第 1 个元素延迟 0 毫秒（因为 i = 0），第 2 个元素延迟 200 毫秒，第 3 个延迟 400 毫秒，依次类推….整个过渡的长度为 200 * 9 + 1000 = 2800 毫秒。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><font color="deeppink">七.三大重要概念</font></p>
+<ul>
+<li><font color="purple">Update：有DOM结构与之对应</font><ul>
+<li>处理方法：更新属性值</li>
+</ul>
+</li>
+<li><font color="purple">Enter：没有DOM结构与之对应</font><ul>
+<li>处理方法：添加元素之后，赋予属性值</li>
+</ul>
+</li>
+<li><font color="purple">Exit：DOM结构足够多，要匹配的元素不够</font><ul>
+<li>处理方法：删掉元素<br><img src="./2.png" alt="Alt text"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><font color="deeppink">八.动态</font></p>
+<ul>
+<li><p><font color="purple">交互</font></p>
+<ul>
+<li>概念<ul>
+<li>指的是用户输入了某种指令，程序接收到指令后必须做出某种响应</li>
+<li>与图标的交互指的是在图形元素上设置一个或多个监听器，当事件发生时，做出相应的反应</li>
+</ul>
+</li>
+<li><p>交互方式</p>
+<pre><code>- 鼠标
+  - 1. click
+  - 2. mouseover 
+  - 3. mouseout
+  - 4. mousemove
+  - 5. mouseup
+  - 没有dbclick事件，要实现的话用click+延迟判定来模拟
+</code></pre><ul>
+<li><p>键盘</p>
+<ul>
+<li><ol>
+<li>keydown - 当用户按下任意键时触发，按住不放会重复触发此事件。该事件不会区分字母的大小写，例如“A”和“a”被视为一致。</li>
+</ol>
+</li>
+<li><ol>
+<li>keypress - 当用户按下字符键（大小写字母、数字、加号、等号、回车等）时触发，按住不放会重复触发此事件。该事件区分字母的大小写。</li>
+</ol>
+</li>
+<li><ol>
+<li>keyup - 当用户释放键时触发，不区分字母的大小写。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>触屏</p>
+<ul>
+<li><ol>
+<li>touchstart - 当触摸点被放在触摸屏上时。</li>
+</ol>
+</li>
+<li><ol>
+<li>touchmove - 当触摸点在触摸屏上移动时。</li>
+</ol>
+</li>
+<li><ol>
+<li>touchend - 当触摸点从触摸屏上拿开时。</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>添加交互 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"> var circle = svg.append(&quot;circle&quot;);</div><div class="line">circle.on(&quot;click&quot;, function()&#123;</div><div class="line">    //在这里添加交互内容</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="./0T3KNNX5[10LOG6JJFJPXP.png" alt="Alt text"></p>
+<ul>
+<li><p><font color="deeppink">九.布局</font></p>
+<ul>
+<li><p><font color="purple">1.布局类型</font></p>
+<ul>
+<li>饼状图（Pie）</li>
+<li>力导向图（Force）</li>
+<li>弦图（Chord）</li>
+<li>树状图（Tree）</li>
+<li>集群图（Cluster）</li>
+<li>捆图（Bundle）</li>
+<li>打包图（Pack）</li>
+<li>直方图（Histogram）</li>
+<li>分区图（Partition）</li>
+<li>堆栈图（Stack）</li>
+<li>矩阵树图（Treemap）</li>
+<li>层级图（Hierarchy）</li>
+<li>（<em>*</em>）12 个布局中，层级图（Hierarchy）不能直接使用。集群图、打包图、分区图、树状图、矩阵树图是由层级图扩展来的。如此一来，能够使用的布局是 11 个（有 5 个是由层级图扩展而来）。这些布局的作用都是将某种数据转换成另一种数据，而转换后的数据是利于可视化的。</li>
+</ul>
+</li>
+<li><p><font color="purple">2.布局的作用</font></p>
+<ul>
+<li>获取绘图所需要的数据<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var dataset=[10,30,20,10,40]</div><div class="line">//定义一个布局</div><div class="line">var pie=d3.layout.pie()</div><div class="line">//返回值赋值给变量pie，此时pie可以当做函数来使用</div><div class="line">var piedata=pie(dataset)</div><div class="line">//5 个整数被转换成了 5 个对象（Object） ，每个对象都有变量起始角度（startAngle）和终止角度（endAngle），还有原数据（属性名称为 data）。这些都是绘图需要的数据。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><font color="purple">3.生成器</font></p>
+<ul>
+<li><p>弧生成器d3.layout.pie();</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var pie=d3.layout.pie();</div><div class="line">var piedata=pie(dataset)</div><div class="line">console.log(piedata);</div><div class="line">//，5 个整数被转换成了 5 个对象（Object） ，每个对象都有变量起始角度（startAngle）和终止角度（endAngle），还有原数据（属性名称为 data）。这些都是绘图需要的数据。</div><div class="line">var  outerRadius=150//外半径</div><div class="line">var innerRadius=0;//内半径，为0则中间没有空白</div><div class="line">var arc=d3.svg.arc()  //弧生成器</div><div class="line">        .innerRadius(innerRadius)  //设置内半径</div><div class="line">        .outerRadius(outerRadius);//设置外半径</div></pre></td></tr></table></figure>
+</li>
+<li><p>力导向图  d3.layout.force()。</p>
+<ul>
+<li>参数<ul>
+<li>index - 节点的索引号</li>
+<li>px, py - 节点上一个时刻的坐标</li>
+<li>x, y - 节点的当前坐标</li>
+<li>weight - 节点的权重</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>地图 d3.geo.path()。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/D3-js/" data-id="cj6q6vqxt0001dc6rp5xgp4oj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/08/24/模块化/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          模块化
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/24/D3-js/">D3.js</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/24/模块化/">模块化</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/24/Node-Global/">Node~Global</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/24/Redux/">Redux</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/24/Angular/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 WangXiaoJiao<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
