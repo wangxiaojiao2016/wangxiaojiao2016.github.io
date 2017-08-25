@@ -128,7 +128,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/25/es8/" data-id="cj6rg7vk70008ig6rr88zokan" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/25/es8/" data-id="cj6rgotso0003286rqp7r1zys" class="article-share-link">Share</a>
       
       
     </footer>
@@ -199,7 +199,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/MIP/" data-id="cj6rg7vjx0006ig6romi0pcap" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/MIP/" data-id="cj6rgotsk0001286rr6l1c5ee" class="article-share-link">Share</a>
       
       
     </footer>
@@ -506,7 +506,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/D3-js/" data-id="cj6rg7vjd0003ig6r8w4lquhi" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/D3-js/" data-id="cj6rgott10009286ry8u07m3n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -647,7 +647,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/模块化/" data-id="cj6rg7vke000aig6rhieocpud" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/模块化/" data-id="cj6rgotta000a286rwtg5tlo4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -716,10 +716,21 @@
 <li>console.info()</li>
 <li>console.error()</li>
 <li>console.time(‘start’)  传入的参数（字符串）保持一致</li>
-<li><p>console.timeEnd(‘start’) 传入的参数（字符串）保持一致</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">      console.time(&apos;start&apos;) </div><div class="line">      for(var i=0;i&lt;1000;i++)&#123;&#125;</div><div class="line">      console.timeEnd(&apos;start&apos;) </div><div class="line">     ``` </div><div class="line">- setTimeOut</div><div class="line">     - 异步（process.nextTick  ;setTimeOut  ;setImmediate）</div></pre></td></tr></table></figure>
-<p> //第二个参数之后都是给setTimeOut传值<br> function eat(who,foods){<br> console.log（this）//setTimeout,指自己<br>console.log(who+’吃’+foods) //里边的this指自己<br>}<br>setTimeout(eat,1000,’小猪’,’冰激凌’)<br>//setTimeout(eat.bind(global),1000,’小猪’,’冰激凌’)改变this指向</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">- &lt;font color=&apos;red&apos;&gt;五个全局属性&lt;/font&gt;</div><div class="line">   -  绝对路径不可变</div><div class="line">   -  console.log(__dirname) //文件名，不会更改（运行文件的过程中，会给文件套一层闭包函数，函数中要有形参</div><div class="line">   - console.log(__filename);//文件模块，</div><div class="line">    ``` </div><div class="line">      (function(exports,require,module,__dirname,__filename)&#123;</div><div class="line">                      2.global.js    //闭包导致this变化</div><div class="line">       &#125;</div></pre></td></tr></table></figure></li>
+<li>console.timeEnd(‘start’) 传入的参数（字符串）保持一致<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">console.time(&apos;start&apos;) </div><div class="line">               for(var i=0;i&lt;1000;i++)&#123;&#125;</div><div class="line">               console.timeEnd(&apos;start&apos;)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>setTimeOut</p>
+<ul>
+<li>异步（process.nextTick  ;setTimeOut  ;setImmediate）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">//第二个参数之后都是给setTimeOut传值</div><div class="line">                function eat(who,foods)&#123;</div><div class="line">                console.log（this）//setTimeout,指自己</div><div class="line">               console.log(who+&apos;吃&apos;+foods) //里边的this指自己</div><div class="line">               &#125;</div><div class="line">               setTimeout(eat,1000,&apos;小猪&apos;,&apos;冰激凌&apos;)</div><div class="line">               //setTimeout(eat.bind(global),1000,&apos;小猪&apos;,&apos;冰激凌&apos;)改变this指向</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><font color="red">五个全局属性</font></p>
+<ul>
+<li>绝对路径不可变</li>
+<li>console.log(__dirname) //文件名，不会更改（运行文件的过程中，会给文件套一层闭包函数，函数中要有形参</li>
+<li>console.log(__filename);//文件模块，<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(function(exports,require,module,__dirname,__filename)&#123;</div><div class="line">                2.global.js    //闭包导致this变化</div><div class="line"> &#125;</div></pre></td></tr></table></figure></li>
 </ul>
 </li>
 </ul>
@@ -729,7 +740,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Node-Global/" data-id="cj6rg7vja0002ig6rpw149yda" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Node-Global/" data-id="cj6rgotsr0005286rsmi9ir6i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -774,7 +785,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Redux/" data-id="cj6rg7vkd0009ig6r3r6pmyks" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Redux/" data-id="cj6rgotsm0002286rbm34sqih" class="article-share-link">Share</a>
       
       
     </footer>
@@ -800,7 +811,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Angular/" data-id="cj6rg7vii0000ig6rpck7ugnc" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Angular/" data-id="cj6rgotsf0000286r5jy07qwa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -868,7 +879,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Vue/" data-id="cj6rg7vj80001ig6r6jo7g9ar" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/Vue/" data-id="cj6rgotsp0004286r5nuw9ecy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -913,7 +924,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/hello-world/" data-id="cj6rg7vjs0004ig6rb8l7crm8" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/hello-world/" data-id="cj6rgotsz0008286rfs6btm7p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1072,7 +1083,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/07/01/jQuery/" data-id="cj6rg7vjy0007ig6ryvbwo0x4" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/07/01/jQuery/" data-id="cj6rgotsu0007286rw42j2dlp" class="article-share-link">Share</a>
       
       
     </footer>
