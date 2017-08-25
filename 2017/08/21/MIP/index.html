@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>blog搭建 | Wang.blog</title>
+  <title>MIP | Wang.blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.安装：npm install hexo-cli -g  //提供命令 hexo 2.新建文件夹 打开命令窗口 3.初始化：hexo init初始化（默认下载）–》初始化结束后会出现很多文件夹 soure文件下 -post下写代码 4.启动服务：hexo serve 开启博客（Start ）   根据localhost进入 一般是4000端口 端口被占用：hexo serve -p 333 改">
+  <meta name="description" content="MIP的组成 MIP HTML MIP JS（保证页面的快速渲染） MIP Cache（实现MIP页面的告诉缓存，进一步提高页面性能）   MIP的加速原理 经过精心设计的JavaScript 所有静态资源需要标明尺寸 不允许任何机制阻止页面渲染 控制外部资源加载 封装交互功能 建议使用inline的css 只允许GPU加速的动画 只允许使用transforms和opacity来完成动画效果，当">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="blog搭建">
-<meta property="og:url" content="https://wangxiaojiao2016.github.io/2017/06/19/blog搭建/index.html">
+<meta property="og:title" content="MIP">
+<meta property="og:url" content="https://wangxiaojiao2016.github.io/2017/08/21/MIP/index.html">
 <meta property="og:site_name" content="Wang.blog">
-<meta property="og:description" content="1.安装：npm install hexo-cli -g  //提供命令 hexo 2.新建文件夹 打开命令窗口 3.初始化：hexo init初始化（默认下载）–》初始化结束后会出现很多文件夹 soure文件下 -post下写代码 4.启动服务：hexo serve 开启博客（Start ）   根据localhost进入 一般是4000端口 端口被占用：hexo serve -p 333 改">
-<meta property="og:updated_time" content="2017-08-24T07:59:16.484Z">
+<meta property="og:description" content="MIP的组成 MIP HTML MIP JS（保证页面的快速渲染） MIP Cache（实现MIP页面的告诉缓存，进一步提高页面性能）   MIP的加速原理 经过精心设计的JavaScript 所有静态资源需要标明尺寸 不允许任何机制阻止页面渲染 控制外部资源加载 封装交互功能 建议使用inline的css 只允许GPU加速的动画 只允许使用transforms和opacity来完成动画效果，当">
+<meta property="og:updated_time" content="2017-08-25T06:25:37.744Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="blog搭建">
-<meta name="twitter:description" content="1.安装：npm install hexo-cli -g  //提供命令 hexo 2.新建文件夹 打开命令窗口 3.初始化：hexo init初始化（默认下载）–》初始化结束后会出现很多文件夹 soure文件下 -post下写代码 4.启动服务：hexo serve 开启博客（Start ）   根据localhost进入 一般是4000端口 端口被占用：hexo serve -p 333 改">
+<meta name="twitter:title" content="MIP">
+<meta name="twitter:description" content="MIP的组成 MIP HTML MIP JS（保证页面的快速渲染） MIP Cache（实现MIP页面的告诉缓存，进一步提高页面性能）   MIP的加速原理 经过精心设计的JavaScript 所有静态资源需要标明尺寸 不允许任何机制阻止页面渲染 控制外部资源加载 封装交互功能 建议使用inline的css 只允许GPU加速的动画 只允许使用transforms和opacity来完成动画效果，当">
   
     <link rel="alternate" href="/atom.xml" title="Wang.blog" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-blog搭建" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-MIP" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/19/blog搭建/" class="article-date">
-  <time datetime="2017-06-18T16:00:00.000Z" itemprop="datePublished">2017-06-19</time>
+    <a href="/2017/08/21/MIP/" class="article-date">
+  <time datetime="2017-08-20T16:00:00.000Z" itemprop="datePublished">2017-08-21</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      blog搭建
+      MIP
     </h1>
   
 
@@ -87,30 +87,45 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>1.安装：npm install hexo-cli -g  //提供命令 hexo</li>
-<li>2.新建文件夹 打开命令窗口</li>
-<li>3.初始化：hexo init初始化（默认下载）–》初始化结束后会出现很多文件夹 soure文件下 -post下写代码</li>
-<li>4.启动服务：hexo serve 开启博客（Start ）  <ul>
-<li>根据localhost进入 一般是4000端口</li>
-<li>端口被占用：hexo serve -p 333 改端口</li>
+<li>MIP的组成<ul>
+<li>MIP HTML</li>
+<li>MIP JS（保证页面的快速渲染）</li>
+<li>MIP Cache（实现MIP页面的告诉缓存，进一步提高页面性能）</li>
 </ul>
 </li>
-<li>主题修改（themes文件夹下）-》点进去-》github拷贝地址（git clone+地址）-》断掉服务-》cd 的themes中进行安装 –》config.yml下输入theme：hexo-theme-next–》命令行hexo serve-》端口号窗口查看即可</li>
-<li>5.（命令窗口）hexo g 生成发布的内容文件</li>
-<li>6.安装插件： npm install hexo-deployer-git –save命令行</li>
-<li>7.hexo g</li>
-<li>8.github新建仓库 new resposity（名字.github.io    名字格式固定不可修改） create resposity<ul>
-<li>git发布 —config.yml中粘贴发布（注意更改成自己的地址）-》打开命令行  配置用户路径<a href="http://userName：password@github.com" target="_blank" rel="external">http://userName：password@github.com</a>   branch:master</li>
+<li>MIP的加速原理<ul>
+<li>经过精心设计的JavaScript</li>
+<li>所有静态资源需要标明尺寸</li>
+<li>不允许任何机制阻止页面渲染</li>
+<li>控制外部资源加载</li>
+<li>封装交互功能</li>
+<li>建议使用inline的css</li>
+<li>只允许GPU加速的动画<ul>
+<li>只允许使用transforms和opacity来完成动画效果，当动画在GPU上执行时，仅触发渲染层合并</li>
 </ul>
 </li>
-<li>9.hexo deploy 发布  生成了.deploy_git 文件</li>
-<li>10.名字.github.io就可以访问了 </li>
+<li>MIP缓存</li>
+<li>开放且持续更新</li>
+</ul>
+</li>
+<li>MIP校验规则<ul>
+<li>减少强制性标签</li>
+<li>禁用标签</li>
+<li>无效属性值</li>
+<li>属性值的无效值</li>
+<li>缺少强制性属性</li>
+<li>直接父标签错误</li>
+<li>非法父级标签</li>
+<li>强制父级标签</li>
+<li>唯一标签重复</li>
+</ul>
+</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/06/19/blog搭建/" data-id="cj6rhul6x00057w6ri3xkheb5" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/21/MIP/" data-id="cj6rhul6n00017w6revgj0plw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -119,10 +134,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2017/08/20/D3-js/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          D3.js
+        
+      </div>
+    </a>
   
-    <a href="/2017/07/01/jQuery/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2017/08/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">jQuery</div>
+      <div class="article-nav-title">Hello World</div>
     </a>
   
 </nav>

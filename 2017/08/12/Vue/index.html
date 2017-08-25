@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>blog搭建 | Wang.blog</title>
+  <title>Vue | Wang.blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.安装：npm install hexo-cli -g  //提供命令 hexo 2.新建文件夹 打开命令窗口 3.初始化：hexo init初始化（默认下载）–》初始化结束后会出现很多文件夹 soure文件下 -post下写代码 4.启动服务：hexo serve 开启博客（Start ）   根据localhost进入 一般是4000端口 端口被占用：hexo serve -p 333 改">
+  <meta name="description" content="1.特点 关注于视层 适用于移动端项目 渐进式框架   2.渐进式 声明式渲染（无需关心如何实现） 组件系统 客户端路由（veu-router） 大规模状态管理（vuex） 构建工具（vue-cli）   3.核心点 66   4.安装  初始化package.json   （npm init -y）121.记住安装过的内容2.不会导致内容安装到上层目录    5.常用指令  v-once 只绑">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="blog搭建">
-<meta property="og:url" content="https://wangxiaojiao2016.github.io/2017/06/19/blog搭建/index.html">
+<meta property="og:title" content="Vue">
+<meta property="og:url" content="https://wangxiaojiao2016.github.io/2017/08/12/Vue/index.html">
 <meta property="og:site_name" content="Wang.blog">
-<meta property="og:description" content="1.安装：npm install hexo-cli -g  //提供命令 hexo 2.新建文件夹 打开命令窗口 3.初始化：hexo init初始化（默认下载）–》初始化结束后会出现很多文件夹 soure文件下 -post下写代码 4.启动服务：hexo serve 开启博客（Start ）   根据localhost进入 一般是4000端口 端口被占用：hexo serve -p 333 改">
-<meta property="og:updated_time" content="2017-08-24T07:59:16.484Z">
+<meta property="og:description" content="1.特点 关注于视层 适用于移动端项目 渐进式框架   2.渐进式 声明式渲染（无需关心如何实现） 组件系统 客户端路由（veu-router） 大规模状态管理（vuex） 构建工具（vue-cli）   3.核心点 66   4.安装  初始化package.json   （npm init -y）121.记住安装过的内容2.不会导致内容安装到上层目录    5.常用指令  v-once 只绑">
+<meta property="og:updated_time" content="2017-08-25T06:25:37.778Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="blog搭建">
-<meta name="twitter:description" content="1.安装：npm install hexo-cli -g  //提供命令 hexo 2.新建文件夹 打开命令窗口 3.初始化：hexo init初始化（默认下载）–》初始化结束后会出现很多文件夹 soure文件下 -post下写代码 4.启动服务：hexo serve 开启博客（Start ）   根据localhost进入 一般是4000端口 端口被占用：hexo serve -p 333 改">
+<meta name="twitter:title" content="Vue">
+<meta name="twitter:description" content="1.特点 关注于视层 适用于移动端项目 渐进式框架   2.渐进式 声明式渲染（无需关心如何实现） 组件系统 客户端路由（veu-router） 大规模状态管理（vuex） 构建工具（vue-cli）   3.核心点 66   4.安装  初始化package.json   （npm init -y）121.记住安装过的内容2.不会导致内容安装到上层目录    5.常用指令  v-once 只绑">
   
     <link rel="alternate" href="/atom.xml" title="Wang.blog" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-blog搭建" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Vue" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/06/19/blog搭建/" class="article-date">
-  <time datetime="2017-06-18T16:00:00.000Z" itemprop="datePublished">2017-06-19</time>
+    <a href="/2017/08/12/Vue/" class="article-date">
+  <time datetime="2017-08-11T16:00:00.000Z" itemprop="datePublished">2017-08-12</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      blog搭建
+      Vue
     </h1>
   
 
@@ -87,30 +87,42 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>1.安装：npm install hexo-cli -g  //提供命令 hexo</li>
-<li>2.新建文件夹 打开命令窗口</li>
-<li>3.初始化：hexo init初始化（默认下载）–》初始化结束后会出现很多文件夹 soure文件下 -post下写代码</li>
-<li>4.启动服务：hexo serve 开启博客（Start ）  <ul>
-<li>根据localhost进入 一般是4000端口</li>
-<li>端口被占用：hexo serve -p 333 改端口</li>
+<li>1.特点<ul>
+<li>关注于视层</li>
+<li>适用于移动端项目</li>
+<li>渐进式框架</li>
 </ul>
 </li>
-<li>主题修改（themes文件夹下）-》点进去-》github拷贝地址（git clone+地址）-》断掉服务-》cd 的themes中进行安装 –》config.yml下输入theme：hexo-theme-next–》命令行hexo serve-》端口号窗口查看即可</li>
-<li>5.（命令窗口）hexo g 生成发布的内容文件</li>
-<li>6.安装插件： npm install hexo-deployer-git –save命令行</li>
-<li>7.hexo g</li>
-<li>8.github新建仓库 new resposity（名字.github.io    名字格式固定不可修改） create resposity<ul>
-<li>git发布 —config.yml中粘贴发布（注意更改成自己的地址）-》打开命令行  配置用户路径<a href="http://userName：password@github.com" target="_blank" rel="external">http://userName：password@github.com</a>   branch:master</li>
+<li>2.渐进式<ul>
+<li>声明式渲染（无需关心如何实现）</li>
+<li>组件系统</li>
+<li>客户端路由（veu-router）</li>
+<li>大规模状态管理（vuex）</li>
+<li>构建工具（vue-cli）</li>
 </ul>
 </li>
-<li>9.hexo deploy 发布  生成了.deploy_git 文件</li>
-<li>10.名字.github.io就可以访问了 </li>
+<li>3.核心点<ul>
+<li>66</li>
+</ul>
+</li>
+<li><p>4.安装</p>
+<ul>
+<li>初始化package.json   （npm init -y）<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">1.记住安装过的内容</div><div class="line">2.不会导致内容安装到上层目录</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>5.常用指令</p>
+<ul>
+<li>v-once 只绑定一次内容，数据再次变化不会导致视图更新</li>
+<li>v-html 默认渲染HTML，自动转化识别后的内容<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">注意点：</div><div class="line">1.数据没有绑定过不能直接在HTML上取--》数据必须先声明才可以使用</div><div class="line">2.如果是对象类型没有初始化数据是不能实现数据视图变化的</div></pre></td></tr></table></figure></li>
+</ul>
+</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/06/19/blog搭建/" data-id="cj6rhul6x00057w6ri3xkheb5" class="article-share-link">Share</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/12/Vue/" data-id="cj6rhul6t00037w6rxshsi7a9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -119,10 +131,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2017/08/07/Redux/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Redux
+        
+      </div>
+    </a>
   
-    <a href="/2017/07/01/jQuery/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2017/08/15/Node-Global/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">jQuery</div>
+      <div class="article-nav-title">Node~Global</div>
     </a>
   
 </nav>

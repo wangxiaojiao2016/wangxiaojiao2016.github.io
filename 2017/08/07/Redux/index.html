@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Redux | Wang.blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一.redux1.redux源码123456789101112131415161718192021222324//创建存储空间let createStore=(reducer)&amp;#123;  let state;//获取初始状态  let liateners=[];//定义监听数组  let getState=()=&amp;gt;state,//返回当前状态  let subscribe=(listen">
+<meta name="keywords">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redux">
+<meta property="og:url" content="https://wangxiaojiao2016.github.io/2017/08/07/Redux/index.html">
+<meta property="og:site_name" content="Wang.blog">
+<meta property="og:description" content="一.redux1.redux源码123456789101112131415161718192021222324//创建存储空间let createStore=(reducer)&amp;#123;  let state;//获取初始状态  let liateners=[];//定义监听数组  let getState=()=&amp;gt;state,//返回当前状态  let subscribe=(listen">
+<meta property="og:updated_time" content="2017-08-25T06:25:37.714Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Redux">
+<meta name="twitter:description" content="一.redux1.redux源码123456789101112131415161718192021222324//创建存储空间let createStore=(reducer)&amp;#123;  let state;//获取初始状态  let liateners=[];//定义监听数组  let getState=()=&amp;gt;state,//返回当前状态  let subscribe=(listen">
+  
+    <link rel="alternate" href="/atom.xml" title="Wang.blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Wang.blog</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wangxiaojiao2016.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Redux" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/07/Redux/" class="article-date">
+  <time datetime="2017-08-06T16:00:00.000Z" itemprop="datePublished">2017-08-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Redux
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一-redux"><a href="#一-redux" class="headerlink" title="一.redux"></a>一.redux</h4><p>1.redux源码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">//创建存储空间</div><div class="line">let createStore=(reducer)&#123;</div><div class="line">  let state;//获取初始状态</div><div class="line">  let liateners=[];//定义监听数组</div><div class="line">  let getState=()=&gt;state,//返回当前状态</div><div class="line">  let subscribe=(listener)&#123;//订阅发布</div><div class="line">   listeners.push(listener)</div><div class="line">   &#125;</div><div class="line">  let dispatch=(action)&#123;//派发action</div><div class="line">    state=reducer(state,action);</div><div class="line">    listeners.forEach(listener=&gt;listener())</div><div class="line">    &#125;</div><div class="line">return&#123;</div><div class="line">  getState,//获取当前状态</div><div class="line">  subscribe,//订阅状态改变事件</div><div class="line">  dispatch//分发action</div><div class="line">  &#125;</div><div class="line"> &#125;</div><div class="line"> //创建store</div><div class="line"> let store=createStore（reducer）</div><div class="line">//订阅</div><div class="line">store.subscribe(function()&#123;</div><div class="line"></div><div class="line"> &#125;)</div></pre></td></tr></table></figure></p>
+<p>2.react-redux（计数器）</p>
+<blockquote>
+<p>1.引入模块<br>2.连接react redux<br>3.管理者动作状态<br>4.状态映射</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">import React from &apos;react&apos;</div><div class="line">import ReactDOM from &apos;react-dom&apos;</div><div class="line">//负责react redux的连接</div><div class="line">import &#123;createStore&#125; from &apos;redux&apos;;</div><div class="line">import &#123;connect, Provider&#125; from &apos;react-redux&apos;;</div><div class="line">//let reducer=(state=&#123;number:0&#125;,action)=&gt;&#123;</div><div class="line">let reducer=(state=0,action)=&gt;&#123;</div><div class="line">    switch (action.type)&#123;</div><div class="line">        case &apos;ADD&apos;:</div><div class="line">            return state+1;</div><div class="line">            break;</div><div class="line">        case &apos;SUB&apos;:</div><div class="line">            return state-1;</div><div class="line">            break;</div><div class="line">        default:</div><div class="line">            return state;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">let store=createStore(reducer);</div><div class="line">class Counter extends React.Component&#123;</div><div class="line">    render()&#123;</div><div class="line">        return(</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;p&gt;&#123;this.props.number&#125;&lt;/p&gt;</div><div class="line">                &lt;button onClick=&#123;this.props.add&#125;&gt;+&lt;/button&gt;</div><div class="line">                &lt;button onClick=&#123;this.props.sub&#125;&gt;-&lt;/button&gt;</div><div class="line">            &lt;/div&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">//将状态映射成一个对象 属性</div><div class="line">let mapStateToProps=(state)=&gt;&#123;</div><div class="line">  return&#123;</div><div class="line">  //    number:state.number 和第11行对应  使用对象</div><div class="line">      number:state</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">//映射成一个方法</div><div class="line">let mapDispatchStateToProps=(dispatch)=&gt;&#123;</div><div class="line">    return &#123;</div><div class="line">        add:()=&gt;dispatch(&#123;type:&apos;ADD&apos;&#125;),</div><div class="line">        sub:()=&gt;dispatch(&#123;type:&apos;SUB&apos;&#125;)</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">//redux容器组件  由connect生成的</div><div class="line">let App=connect(mapStateToProps,mapDispatchStateToProps)(Counter);</div><div class="line">ReactDOM.render(&lt;Provider store=&#123;store&#125;&gt;&lt;App/&gt;&lt;/Provider&gt;,document.querySelector(&apos;#app&apos;));</div></pre></td></tr></table></figure>
+<p>3.映射<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">1.状态映射城对象</div><div class="line">let mapStateToProps=(state)=&gt;&#123;</div><div class="line">return &#123;</div><div class="line"> number:state</div><div class="line"> &#125;</div><div class="line">&#125;</div><div class="line">2.映射成一个方法</div><div class="line">let mapDispatchStateToprops=（dispatch）=&gt;&#123;</div><div class="line">return &#123;</div><div class="line">add:()=&gt;dispatch(&#123;type:&apos;ADD&apos;&#125;),</div><div class="line">sub:()=&gt;dispatch(&#123;type:&apos;SUB&apos;&#125;)</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>4.容器组件生成（有connect生成的）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let App=connect(mapStateToProps,mapDispatchStateToProps)(Counter);</div><div class="line">ReactDOM.render(&lt;Provider store=&#123;store&#125;&gt;&lt;/App&gt;&lt;Provider/&gt;,document.querySelector(&apos;#app&apos;))</div></pre></td></tr></table></figure></p>
+<p>5.对象和状态的不同写法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">1.以对象的形式</div><div class="line">let reducer=(state=&#123;number：0&#125;,action)=&gt;&#123;</div><div class="line">	代码块</div><div class="line">&#125;</div><div class="line">let mapStateToProps=(state)=&gt;&#123;</div><div class="line">  return&#123;</div><div class="line"> number:state.number//对象</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">2.状态</div><div class="line">let reducer=(state=0,action)=&gt;&#123;</div><div class="line">	代码块</div><div class="line">&#125;</div><div class="line">let mapStateToProps=(state)=&gt;&#123;</div><div class="line">  return&#123;</div><div class="line"> number:state</div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/07/Redux/" data-id="cj6rhul6v00047w6rvv6829k8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/08/01/模块化/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          模块化
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/08/12/Vue/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/08/25/es8/">es8</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/24/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/21/MIP/">MIP</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/20/D3-js/">D3.js</a>
+          </li>
+        
+          <li>
+            <a href="/2017/08/15/Node-Global/">Node~Global</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 WangXiaoJiao<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
