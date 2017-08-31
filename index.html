@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://wangxiaojiao2016.github.io"></form>
@@ -60,6 +60,88 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-skills" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/08/31/skills/" class="article-date">
+  <time datetime="2017-08-31T02:38:44.000Z" itemprop="datePublished">2017-08-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/08/31/skills/">&#39;skills&#39;</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="关于HTML5和CSS3"><a href="#关于HTML5和CSS3" class="headerlink" title="关于HTML5和CSS3"></a>关于HTML5和CSS3</h4><ul>
+<li><font color="purple">继承</font><ul>
+<li>字体样式可继承，宽高边框不继承</li>
+</ul>
+</li>
+<li><font color="purple">网站优化</font><ul>
+<li>文件合并和压缩，CDN托管和缓存</li>
+</ul>
+</li>
+<li><font color="purple">通信</font><ul>
+<li>本地存储来使用，页面之间来通信；WebSocket、SharedWorker，实现通信没问题；Safari无痕模式下，设置localstorage有异常（QuotaExceededError）;websocket兼容浏览器，兼容方法有四种，Adobe Flash Socket、ActiveXHTMLFile(IE)、基于multipart发XHR、基于长轮询XHR</li>
+</ul>
+</li>
+<li><font color="purple">HTML5新增标签</font><ul>
+<li>语义标签有九个，section、header和footer，nav、article以及main、figure图片、aside，图片注释figcaption；</li>
+<li>功能标签有两个，datalist下拉框，下拉列表detail，summary中放detail，detail（open）为打开，默认时候是关闭；</li>
+<li>表单种类十二个，search、Tel、email；number、time和地址；range数值选择器；week、month、datetime；</li>
+<li>表单特性有八个，聚焦（autofocus）正则（pattern）和关联（form）；占位（placeholder）保存（autocomplete）和必填（required）；on是默认来保存，off取消默认不保存；novalidate不提交，针对form来使用；formnovalidate作用submit上，不验证来提交；表单验证invalid，验证失败来触发</li>
+</ul>
+</li>
+<li><font color="purple">离线存储</font><ul>
+<li>H5离线存储有原理，基于新建文件的机制（.appcache）；解析清单来离线（资源），资源存储像cookie；离线之后浏览器，页面展示用存储。html头部有manifest,首次访问需存储。</li>
+</ul>
+</li>
+<li><font color="purple">iframe的缺点</font><ul>
+<li>iframe有缺点，1是阻塞主页Onload；2是搜索引擎有问题，无法解锁此页面，不利SEO；页面共享连接池，浏览器对同域有限制，导致并行加载有问题；如果必须要使用，js动态填属性，属性名为src</li>
+</ul>
+</li>
+<li><font color="purple">CS3的新特性</font><ul>
+<li>圆角多列（multi-column layout）和旋转（transform），阴影（shadow）反射（Reflect）和渐变（gradient）。Cs3页面新布局，Flexbox弹性盒，伸缩容器（flex container）解复杂；子元素是容器，容器元素是项目；常规布局块和（内联）流，flex基于flex-flow流，方便居中自适应，布局空间更灵活。</li>
+</ul>
+</li>
+<li>定位元素position，fixed针对页面定屏幕滑动viewport，Android定位加meta（meta name=”viewport” content=”width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no”&gt;）</li>
+<li><font color="purple">静态文件请求</font><ul>
+<li>静文请求有cookie（主域名下的静态文件），浪费流量需隔离；cookie不能跨域交请求，（非主要域名时）请求头中没cookie；降低请求大小和时间，减少请求延时性；不传cookie少处理，提高（webserver）解析http的速度</li>
+</ul>
+</li>
+<li><font color="purple">CSS处理器</font><ul>
+<li>LESS、Sass、Stylus，三者均是预处理，增强代码复用性，拥有变量函数等，具有UI组件模块化开发能力更方便，工作效率会更高；PostCSS后处理，规范处理CSS，针对浏览器加前缀，实现跨域浏览器的兼容</li>
+</ul>
+</li>
+<li><font color="purple">DOM元素的隐藏</font><ul>
+<li>display设为none，不显示不占位；visibility为hidden，虽不显示但占位；H5隐藏更简单，标签上面加hidden(\<div hidden\="">)</div></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/31/skills/" data-id="cj6zudlqp0008346rh090exwi" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-es8" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -128,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/25/es8/" data-id="cj6zthefp0009ec6riu9e01z3" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/25/es8/" data-id="cj6zudlqg0005346rbal5v6l9" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -173,7 +255,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/hello-world/" data-id="cj6zthefe0006ec6rs52x2e0c" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/24/hello-world/" data-id="cj6zudlqi0006346rahxnkcpq" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -244,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/21/MIP/" data-id="cj6zthed80003ec6rhbu0nl3l" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/21/MIP/" data-id="cj6zudlqa0001346rjw1188k9" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -551,7 +633,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/20/D3-js/" data-id="cj6zthebs0000ec6rehghg1t6" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/20/D3-js/" data-id="cj6zudlq40000346ryt340oab" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -644,7 +726,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/15/Node-Global/" data-id="cj6zthed60002ec6r98k9vbd0" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/15/Node-Global/" data-id="cj6zudlqd0003346r107xrzjf" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -712,7 +794,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/12/Vue/" data-id="cj6ztheda0004ec6rnouwle87" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/12/Vue/" data-id="cj6zudlqc0002346rc8ewsrku" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -757,7 +839,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/07/Redux/" data-id="cj6zthed30001ec6ro7h19fr9" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/07/Redux/" data-id="cj6zudlqk0007346rn10b3g94" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -898,7 +980,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/08/01/模块化/" data-id="cj6zthefn0008ec6rv1ribtfd" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/08/01/模块化/" data-id="cj6zudlr1000a346raevt2qj7" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -1057,63 +1139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/07/01/jQuery/" data-id="cj6zthefi0007ec6r2ciyy6b0" class="article-share-link">Delen</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-blog搭建" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/06/19/blog搭建/" class="article-date">
-  <time datetime="2017-06-18T16:00:00.000Z" itemprop="datePublished">2017-06-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/19/blog搭建/">blog搭建</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>1.安装：npm install hexo-cli -g  //提供命令 hexo</li>
-<li>2.新建文件夹 打开命令窗口</li>
-<li>3.初始化：hexo init初始化（默认下载）–》初始化结束后会出现很多文件夹 soure文件下 -post下写代码</li>
-<li>4.启动服务：hexo serve 开启博客（Start ）  <ul>
-<li>根据localhost进入 一般是4000端口</li>
-<li>端口被占用：hexo serve -p 333 改端口</li>
-</ul>
-</li>
-<li>主题修改（themes文件夹下）-》点进去-》github拷贝地址（git clone+地址）-》断掉服务-》cd 的themes中进行安装 –》config.yml下输入theme：hexo-theme-next–》命令行hexo serve-》端口号窗口查看即可</li>
-<li>5.（命令窗口）hexo g 生成发布的内容文件</li>
-<li>6.安装插件： npm install hexo-deployer-git –save命令行</li>
-<li>7.hexo g</li>
-<li>8.github新建仓库 new resposity（名字.github.io    名字格式固定不可修改） create resposity<ul>
-<li>git发布 —config.yml中粘贴发布（注意更改成自己的地址）-》打开命令行  配置用户路径<a href="http://userName：password@github.com" target="_blank" rel="external">http://userName：password@github.com</a>   branch:master</li>
-</ul>
-</li>
-<li>9.hexo deploy 发布  生成了.deploy_git 文件</li>
-<li>10.名字.github.io就可以访问了 </li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://wangxiaojiao2016.github.io/2017/06/19/blog搭建/" data-id="cj6zthefb0005ec6rfnq2uyro" class="article-share-link">Delen</a>
+      <a data-url="https://wangxiaojiao2016.github.io/2017/07/01/jQuery/" data-id="cj6zudlqq0009346ryfvwdpf4" class="article-share-link">Partager</a>
       
       
     </footer>
@@ -1124,6 +1150,10 @@
 
   
 
+
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
 </section>
         
           <aside id="sidebar">
@@ -1138,7 +1168,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a></li></ul>
     </div>
@@ -1148,9 +1178,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Articles récents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/08/31/skills/">&#39;skills&#39;</a>
+          </li>
         
           <li>
             <a href="/2017/08/25/es8/">es8</a>
@@ -1168,10 +1202,6 @@
             <a href="/2017/08/20/D3-js/">D3.js</a>
           </li>
         
-          <li>
-            <a href="/2017/08/15/Node-Global/">Node~Global</a>
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -1185,7 +1215,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 WangXiaoJiao<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
